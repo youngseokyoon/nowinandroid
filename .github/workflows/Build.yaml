@@ -180,6 +180,9 @@ jobs:
       - name: Copy CI gradle.properties
         run: mkdir -p ~/.gradle ; cp .github/ci-gradle.properties ~/.gradle/gradle.properties
 
+      - name: Check gradle properties
+        run: pwd; cat ~/.gradle/gradle.properties
+
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
